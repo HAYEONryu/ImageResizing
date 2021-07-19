@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>upload file 목록</h1>
+	<ul th:each="file: ${files}">
+		<li ><span th:text="${file.fileName}"></span> 
+		<li>file size is <span th:text="${file.fileSize}"></span> </li>
+		<li >file width / height are <span th:text="${file.fileWH}"></span> </li>
+ 		<li><img th:src="@{'/direc/'+${file.fileName}}" th:alt=${file.fileName}>
+		</li>
+	</ul>
+	
+</body>
+</html>

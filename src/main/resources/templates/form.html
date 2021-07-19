@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>파일 upload</h1>
+	<form method="post" action="/upload" enctype="multipart/form-data">
+		가로: <input type="number" name = "width"  value="700">
+		세로: <input type="number" name = "height" value="700"></br></br>
+		<input type="file" name="uploadfile" multiple="multiple">
+		<input type="submit">
+	</form>
+</body>
+</html>
